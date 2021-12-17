@@ -43,3 +43,54 @@ nav{
 .profil a > img{
     width: 20px;
 }
+
+.container-sneakers{
+    display:flex;
+    padding: 4rem 1.5rem;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.photos{
+    width: 50%;
+}
+
+.photos > img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.infos{
+    width: 50%;
+    margin-left: 4rem;
+}
+
+.infos h4 {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: hsl(26, 100%, 55%);
+    margin-bottom: 15px;
+}
+
+.infos h2{
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.infos > p:first-of-type {
+    color: hsl(219, 9%, 45%);
+    margin-bottom: 20px;
+}
+.new-price{
+    font-size: 25px;
+    font-weight: 700;
+}
+.discount{
+    color: hsl(26, 100%, 55%);
+    font-size: 18px;
+    background: hsl(25, 100%, 94%);
+    padding: 3px;
+    border-radius: 3px;
+    margin-left: 20px;
+}
