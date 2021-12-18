@@ -38,6 +38,7 @@ nav{
 .profil{
     display: flex;
     align-items: center;
+    position: relative;
 }
 .profil > img{
     width: 40px;
@@ -45,6 +46,32 @@ nav{
 }
 .profil a > img{
     width: 20px;
+}
+
+.container-cart{
+    display: none;
+    position: absolute;
+    width: 300px;
+    top: 4rem;
+    right: -1rem;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.appear{
+    display:block;
+}
+.container-cart > p {
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+    padding: 1rem;
+}
+.articles-cart{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:hsl(219, 9%, 45%)
 }
 
 .container-sneakers{
@@ -75,7 +102,7 @@ nav{
 }
 
 .mini-photos img:hover{
-    border: 2px solid hsl(26, 100%, 55%);
+    border: 3px solid hsl(26, 100%, 55%);
     opacity: 0.5; 
 }
 
