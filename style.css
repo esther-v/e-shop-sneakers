@@ -47,6 +47,17 @@ nav{
 .profil a > img{
     width: 20px;
 }
+.pastille{
+    position: absolute;
+    left: 13px;
+    top: -3px;
+    font-size: 11px;
+    background: hsl(26, 100%, 55%);
+    padding: 0.25rem 0.5rem;
+    color: white;
+    border-radius: 50%;
+    display: none;
+}
 
 .container-cart{
     display: none;
@@ -173,15 +184,16 @@ nav{
     font-weight: bold;
     padding-bottom: 2px;
 }
-.quantity button{
+.quantity p{
     background: none;
     border: none;
     font-size: 20px;
     color:hsl(26, 100%, 55%);
     font-weight: bold;
     font-family: inherit;
+    cursor: pointer;
 }
-.add-to-cart>button{
+.add{
     background: hsl(26, 100%, 55%);
     border: none;
     border-radius: 8px;
@@ -191,4 +203,30 @@ nav{
     font-family: inherit;
     font-weight: bold;
     box-shadow: 0px 20px 40px rgba(255, 125, 26, 0.311);
+}
+
+.articles-in-cart{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+}
+.articles-in-cart > img{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+.articles-in-cart >button:first-of-type{
+    background: none;
+    border: none;
+}
+.info-cart p {
+    font-size: 14px;
+    font-weight: normal;
+}
+.checkout{
+    padding: 1rem;
+    box-shadow: none;
+    margin: 1.5rem 0 0;
+    width: 100%;
 }
