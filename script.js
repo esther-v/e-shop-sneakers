@@ -8,7 +8,7 @@ const addToCart = document.querySelector('.add-to-cart')
 const plusBtn = document.querySelector('.plus')
 const minusBtn = document.querySelector('.minus')
 
-let panier = []
+let quantityInCart = 0
 
 //display cart
 cartIcone.addEventListener('click', () => {
@@ -35,23 +35,33 @@ minusBtn.addEventListener('click', () => {
 //adding articles to cart
 addToCart.addEventListener("submit", (e) => {
     e.preventDefault()
-    console.log('ok')
-    console.log(numberArticles)
+    
+    quantityInCart += numberArticles
     let price = 125.00
-    let total = price * numberArticles
-    if(numberArticles > 0) {
-        pastille.textContent = numberArticles
+    let total = price * quantityInCart
+    if(quantityInCart > 0) {
+        pastille.textContent = quantityInCart
         pastille.classList.add('appear')
         cartContents.innerHTML = `
             <div class="articles-in-cart">
                 <img src="./images/image-product-1-thumbnail.jpg">
                 <div class="info-cart">
                     <p>Fall Limited Edition Sneakers</p>
-                    <p>$${price}.00 x ${numberArticles} = <strong> $${total}.00</strong> </p>
+                    <p>$${price}.00 x ${quantityInCart} = <strong> $${total}.00</strong> </p>
                 </div>
-                <button><img src="./images/icon-delete.svg">
+                <button onclick=removeArticles()><img src="./images/icon-delete.svg">
                 <button class="checkout add">Checkout</button>
             </div>
         `
     }
+    quantityItem.value = 0
+    numberArticles = 0
 })
+
+const removeArticles = () => {
+    quantityInCart = 0
+    pastille.classList.remove('appear')
+    cartContents.innerHTML = `
+        <p>Your cart is empty.</p> 
+    `
+}

@@ -57,6 +57,7 @@ nav{
     color: white;
     border-radius: 50%;
     display: none;
+    font-weight: bold;
 }
 
 .container-cart{
