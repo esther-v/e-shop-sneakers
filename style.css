@@ -231,3 +231,39 @@ nav{
     margin: 1.5rem 0 0;
     width: 100%;
 }
+
+/* galerie photos */
+
+.btn-modale{
+    cursor: pointer;
+}
+.bloc-modale{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 100;
+    display: none;
+}
+.active-modale{
+    display: block;
+}
+.bloc-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 500px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloc-img img{
+    width: 400px;
+    height: 400px;
+}

@@ -65,3 +65,21 @@ const removeArticles = () => {
         <p>Your cart is empty.</p> 
     `
 }
+
+//galerie d'images clickable
+const imgGallery = document.querySelectorAll('.btn-modale')
+const modaleGallery = document.querySelector('.bloc-modale')
+const imgIndex = document.querySelector('.bloc-modale img')
+
+if(window.matchMedia("(min-width: 850px").matches) {
+    imgGallery.forEach(image => {
+        image.addEventListener('click', (e) => {
+            imgIndex.src = `./images/image-product-${e.target.getAttribute('data-index')}.jpg`
+            modaleGallery.classList.add('active-modale')
+        })
+    })
+
+    modaleGallery.addEventListener('click', () => {
+        modaleGallery.classList.remove('active-modale')
+    })
+}
