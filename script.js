@@ -82,16 +82,21 @@ if(window.matchMedia("(min-width: 850px").matches) {
             imgIndex.src = `./images/image-product-${currentIndex}.jpg`
             modaleGallery.classList.add('active-modale')
             let numIndex = parseInt(currentIndex)
-            console.log(numIndex)
+
             nextImg.addEventListener('click', () => {
-                console.log('ok')
-                console.log(currentIndex)
-                imgIndex.src = `./images/image-product-${numIndex + 1}.jpg`
-                numIndex +=1
+                if(numIndex < 4) {
+                    console.log('ok')
+                    imgIndex.src = `./images/image-product-${numIndex + 1}.jpg`
+                    numIndex +=1
+                }
+                  
+               
             })
             prevImg.addEventListener('click', () => {
-                imgIndex.src = `./images/image-product-${numIndex - 1}.jpg`
-                numIndex -=1
+                if(numIndex > 1) {
+                    imgIndex.src = `./images/image-product-${numIndex - 1}.jpg`
+                    numIndex -=1
+                } 
             })
         })
     })
