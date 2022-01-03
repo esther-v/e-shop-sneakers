@@ -88,8 +88,7 @@ if(window.matchMedia("(min-width: 850px").matches) {
                     console.log('ok')
                     imgIndex.src = `./images/image-product-${numIndex + 1}.jpg`
                     numIndex +=1
-                }
-                  
+                }     
                
             })
             prevImg.addEventListener('click', () => {
@@ -104,8 +103,5 @@ if(window.matchMedia("(min-width: 850px").matches) {
     closeModale.addEventListener('click', () => {
         modaleGallery.classList.remove('active-modale')
     })
-
-    
-
-    
+  
 }

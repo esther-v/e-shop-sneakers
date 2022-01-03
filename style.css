@@ -295,3 +295,78 @@ nav{
 .prev{
     left: -20px;
 }
+
+/* burger menu */
+.burger-menu{
+    display: flex;
+    flex-direction: column;
+    margin: 2px 12px 0 0;
+    cursor: pointer;
+    display: none;
+}
+.burger-menu span {
+    background: hsl(219, 9%, 45%);
+    width: 15px;
+    height: 3px;
+    margin-bottom: 3px;
+}
+.burger-menu:hover span{
+    background: hsl(26, 100%, 55%);
+}
+
+.hide{
+    transform: translateX(-100%);
+}
+
+/* media queries */
+@media screen and (max-width: 935px) {
+
+    /* menu  */
+    .menu > li:not(#logo){
+        display: none;
+    }
+    .burger-menu{
+        display: flex;
+    }
+
+    .mini-photos {
+        display: none;
+    }
+
+    .container-sneakers{
+        flex-direction: column;
+        padding: 0;
+    }
+    .infos{
+        margin: 20px;
+        width: 100%;
+        padding: 0 20px;
+    }
+    .photos{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .photos> img{
+        border-radius: 0;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 550px) {
+    body{
+        margin: 0 1rem;
+        
+    }
+    .add-to-cart{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .quantity, .add{
+        width: 100%;
+    }
+    .add {
+        padding: 10px 10px 12px;
+        margin: 10px 0 0;
+    }
+}
