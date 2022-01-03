@@ -105,3 +105,13 @@ if(window.matchMedia("(min-width: 850px").matches) {
     })
   
 }
+
+//burger menu
+const burger = document.querySelector('.burger-menu')
+const menu = document.querySelector('.menu')
+const links = document.querySelectorAll('.menu a')
+
+burger.addEventListener('click', () => {
+    menu.classList.toggle('menu-open')
+    burger.classList.toggle('burger-cross')
+})
