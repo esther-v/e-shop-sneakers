@@ -255,7 +255,7 @@ nav{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 800px;
+    width: 500px;
     height: 500px;
     border: 1px solid red;
     display: flex;
@@ -264,6 +264,34 @@ nav{
 }
 
 .bloc-img img{
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
+}
+.fermeture-modale, .next, .prev{
+    position: absolute;
+    font-size: 22px;
+    border: none;
+    font-family: inherit;
+}
+.fermeture-modale {
+    top: -30px;
+    right: 0;
+    background: none;
+    color:hsl(26, 100%, 55%);
+    font-weight: bold;
+    font-family: inherit;
+ 
+}
+.next, .prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+}
+.next{
+    right: -20px;
+    
+}
+.prev{
+    left: -20px;
 }

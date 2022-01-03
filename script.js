@@ -70,16 +70,37 @@ const removeArticles = () => {
 const imgGallery = document.querySelectorAll('.btn-modale')
 const modaleGallery = document.querySelector('.bloc-modale')
 const imgIndex = document.querySelector('.bloc-modale img')
+const closeModale = document.querySelector('.fermeture-modale')
+const prevImg = document.querySelector('.prev')
+const nextImg = document.querySelector('.next')
+let currentIndex
 
 if(window.matchMedia("(min-width: 850px").matches) {
     imgGallery.forEach(image => {
         image.addEventListener('click', (e) => {
-            imgIndex.src = `./images/image-product-${e.target.getAttribute('data-index')}.jpg`
+            currentIndex = `${e.target.getAttribute('data-index')}`
+            imgIndex.src = `./images/image-product-${currentIndex}.jpg`
             modaleGallery.classList.add('active-modale')
+            let numIndex = parseInt(currentIndex)
+            console.log(numIndex)
+            nextImg.addEventListener('click', () => {
+                console.log('ok')
+                console.log(currentIndex)
+                imgIndex.src = `./images/image-product-${numIndex + 1}.jpg`
+                numIndex +=1
+            })
+            prevImg.addEventListener('click', () => {
+                imgIndex.src = `./images/image-product-${numIndex - 1}.jpg`
+                numIndex -=1
+            })
         })
     })
 
-    modaleGallery.addEventListener('click', () => {
+    closeModale.addEventListener('click', () => {
         modaleGallery.classList.remove('active-modale')
     })
+
+    
+
+    
 }
